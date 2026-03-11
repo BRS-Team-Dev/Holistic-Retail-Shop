@@ -1,0 +1,511 @@
+/* ==================== ADDITIONAL STYLES FOR ABIGAIL FAESSLER SITE ==================== */
+
+/* Navigation Logo Text */
+.nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.nav-logo-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-charcoal);
+}
+
+.nav-logo-tagline {
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--color-gray);
+    letter-spacing: 0.5px;
+}
+
+/* Hero Emphasis Text */
+.hero-emphasis {
+    font-weight: 600;
+    color: var(--color-sage-dark);
+    margin: 16px 0;
+}
+
+/* Credibility Strip */
+.credibility-strip {
+    background: var(--color-sage-light);
+    padding: 32px 60px;
+    text-align: center;
+}
+
+.credibility-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.credibility-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-sage-dark);
+    flex-shrink: 0;
+}
+
+.credibility-content p {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--color-charcoal);
+    margin: 0;
+}
+
+/* About Section Styles */
+.about-approach {
+    padding: 120px 60px;
+    background: var(--color-surface-warm);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1400px;
+    margin: 60px auto 0;
+    align-items: center;
+}
+
+.about-statement h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-sage-dark);
+    margin-bottom: 40px;
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--color-charcoal);
+    margin-bottom: 24px;
+}
+
+.about-text p strong {
+    color: var(--color-sage-dark);
+    font-weight: 600;
+}
+
+.about-emphasis {
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    color: var(--color-sage-dark) !important;
+    margin-top: 32px !important;
+    padding-top: 32px !important;
+    border-top: 2px solid var(--color-sage-light);
+}
+
+.about-visual {
+    position: relative;
+}
+
+/* How I Work Section */
+.how-i-work {
+    padding: 120px 60px;
+    background: var(--color-bg);
+}
+
+.approach-focus-intro {
+    text-align: center;
+    margin: 48px 0 40px;
+}
+
+.approach-focus-intro p {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--color-sage-dark);
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.approach-card {
+    background: var(--color-surface);
+    padding: 40px 32px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--color-cream);
+}
+
+.approach-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(122, 154, 138, 0.15);
+    border-color: var(--color-sage-light);
+}
+
+.approach-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-sage-light);
+    border-radius: 50%;
+}
+
+.approach-icon svg {
+    width: 30px;
+    height: 30px;
+    stroke: var(--color-sage-dark);
+    fill: none;
+    stroke-width: 1.5;
+}
+
+.approach-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-charcoal);
+}
+
+.approach-footer {
+    text-align: center;
+    margin-top: 64px;
+}
+
+.approach-emphasis {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-sage-dark);
+}
+
+/* Method Section Additions */
+.method-intro {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-gray);
+    max-width: 700px;
+    margin: 24px auto 0;
+    text-align: center;
+}
+
+.method-focus-intro {
+    text-align: center;
+    margin: 48px 0 40px;
+}
+
+.method-focus-intro p {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--color-sage-dark);
+}
+
+.method-features {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.method-feature {
+    background: var(--color-surface);
+    padding: 32px 24px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-cream);
+    box-shadow: 0 15px 35px rgba(122, 154, 138, 0.22);
+}
+
+.method-feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(122, 154, 138, 0.42);
+    border-color: var(--color-sage-light);
+}
+
+.method-feature-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-sage-light);
+    border-radius: 50%;
+}
+
+.method-feature-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--color-sage-dark);
+    fill: none;
+    stroke-width: 1.5;
+}
+
+.method-feature h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--color-charcoal);
+}
+
+.method-cta {
+    text-align: center;
+    margin-top: 64px;
+}
+
+.method-tagline {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-sage-dark);
+    margin-bottom: 32px;
+}
+
+/* Who This Is For Section */
+.who-section {
+    padding: 120px 60px;
+    background-color: #fff;
+}
+
+.who-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.who-content {
+    margin-top: 60px;
+}
+
+.who-intro {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-sage-dark);
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.who-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.who-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: var(--color-surface);
+    padding: 28px 32px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-cream);
+    box-shadow: 0 10px 30px rgba(122, 154, 138, 0.22);
+}
+
+.who-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 10px 30px rgba(122, 154, 138, 0.42);
+    border-color: var(--color-sage-light);
+}
+
+.who-check {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    background: var(--color-sage-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.who-check svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--color-sage-dark);
+    fill: none;
+    stroke-width: 2.5;
+}
+
+.who-item p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    margin: 0;
+}
+
+/* ==================== RESPONSIVE STYLES ==================== */
+
+@media (max-width: 1024px) {
+    .credibility-strip {
+        padding: 28px 40px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .method-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-logo-name {
+        font-size: 1rem;
+    }
+
+    .nav-logo-tagline {
+        font-size: 0.6rem;
+    }
+
+    .credibility-strip {
+        padding: 24px 24px;
+    }
+
+    .credibility-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .credibility-content p {
+        font-size: 0.95rem;
+    }
+
+    .about-approach,
+    .how-i-work,
+    .who-section {
+        padding: 80px 24px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-statement h3 {
+        font-size: 1.6rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .approach-card {
+        padding: 32px 24px;
+    }
+
+    .approach-emphasis {
+        font-size: 1.4rem;
+    }
+
+    .method-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .method-tagline {
+        font-size: 1.15rem;
+    }
+
+    .who-intro {
+        font-size: 1.1rem;
+    }
+
+    .who-item {
+        padding: 24px;
+    }
+
+    .who-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo-text {
+        display: none;
+    }
+
+    .credibility-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .about-statement h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-approach,
+    .how-i-work,
+    .who-section {
+        padding: 60px 20px;
+    }
+
+    .approach-card h3,
+    .method-feature h3 {
+        font-size: 1.1rem;
+    }
+
+    .who-item {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .who-check {
+        align-self: flex-start;
+    }
+}
+
+/* ==================== REVEAL ANIMATIONS ==================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Specific reveal animations for different sections */
+.approach-card.reveal,
+.method-feature.reveal,
+.who-item.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.approach-card.reveal.active,
+.method-feature.reveal.active,
+.who-item.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
