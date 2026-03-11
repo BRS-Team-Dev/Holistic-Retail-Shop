@@ -149,10 +149,6 @@
         </div>
     </section>
 
-    <!-- <section style="position:relative; background-image: url('img/bg.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat; min-height: 100vh;">
-        <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,0.5);"></div>
-    </section> -->
-
     <!-- Conditions Section -->
     <section class="conditions conditions2" id="conditions">
         <div class="section-header reveal">
@@ -559,81 +555,93 @@
     <section id="booking">
         <div class="booking-container">
             <div class="booking-form" id="bookingForm">
-                <!-- <form action=""> -->
-                    <input type="hidden" name="_next" value="https://holisticretailshop.com/">
-                    <input type="hidden" name="_subject" value="New Contact Form submission">
-                    <input type="hidden" name="_template" value="box">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="_honey" style="display:none">
-                    <div id="formContent">
-                        <h3 class="form-title">Book Your Free Session</h3>
-                        <p class="form-subtitle">Spaces are limited — reserve yours today.</p>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>First Name</label>
-                                <input type="text" name="fname" id="fname" placeholder="Jane"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Last Name</label>
-                                <input type="text" name="lname" id="lname" placeholder="Doe"/>
-                            </div>
+                <div id="formContent">
+                    <h3 class="form-title">Book Your Free Session</h3>
+                    <p class="form-subtitle">Spaces are limited — reserve yours today.</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" name="fname" id="fname" placeholder="Jane" required/>
                         </div>
                         <div class="form-group">
-                            <label>Email Address</label>
-                            <input type="email" name="email" id="email" placeholder="jane@example.com"/>
+                            <label>Last Name</label>
+                            <input type="text" name="lname" id="lname" placeholder="Doe" required/>
                         </div>
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="tel" id="phone" placeholder="+44 7700 000000"/>
-                        </div>
-                        <div class="form-group">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="jane@example.com" required/>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" id="phone" placeholder="+44 7700 000000" required/>
+                    </div>
+                    
+                    <div class="form-group">
                         <label>Preferred Session Type</label>
                         <div class="session-types">
                             <label class="session-type">
-                                <input type="radio" name="session" value="video" checked/><span class="session-label">
-                                <span><i style="font-size:24px" class="fa">&#xf03d;</i></span> Video Call</span>
+                                <input type="radio" name="session" id="session-video" value="Video Call" checked/>
+                                <span class="session-label">
+                                    <span><i style="font-size:24px" class="fa">&#xf03d;</i></span> Video Call
+                                </span>
                             </label>
                             <label class="session-type">
-                                <input type="radio" name="session" value="phone"/><span class="session-label">
-                                <span><i style="font-size:24px" class="fa">&#xf095;</i></span> Phone Call</span>
+                                <input type="radio" name="session" id="session-phone" value="Phone Call"/>
+                                <span class="session-label">
+                                    <span><i style="font-size:24px" class="fa">&#xf095;</i></span> Phone Call
+                                </span>
                             </label>
                         </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Primary Concern</label>
+                        <select name="concern" id="concern" required>
+                            <option value="">Select your main concern…</option>
+                            <option>Menopause / Perimenopause</option>
+                            <option>Hormonal Imbalance</option>
+                            <option>Low Energy &amp; Fatigue</option>
+                            <option>Digestive Issues</option>
+                            <option>Inflammation / Joint Pain</option>
+                            <option>Weight Management</option>
+                            <option>Detox / Reset Programme</option>
+                            <option>Wellness Mentorship</option>
+                            <option>General Wellness Review</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Preferred Date</label>
+                            <input type="date" name="preferred-date" id="preferred-date" required/>
                         </div>
                         <div class="form-group">
-                            <label>Primary Concern</label>
-                            <select id="concern">
-                                <option value="">Select your main concern…</option>
-                                <option>Menopause / Perimenopause</option>
-                                <option>Hormonal Imbalance</option>
-                                <option>Low Energy &amp; Fatigue</option>
-                                <option>Digestive Issues</option>
-                                <option>Inflammation / Joint Pain</option>
-                                <option>Weight Management</option>
-                                <option>Detox / Reset Programme</option>
-                                <option>Wellness Mentorship</option>
-                                <option>General Wellness Review</option>
-                                <option>Other</option>
+                            <label>Preferred Time</label>
+                            <select name="preferred-time" id="preferred-time" required>
+                                <option value="">Select time…</option>
+                                <option>Morning (9am–12pm)</option>
+                                <option>Afternoon (12pm–3pm)</option>
+                                <option>Late Afternoon (3pm–6pm)</option>
                             </select>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group"><label>Preferred Date</label>
-                                <input type="date" id="preferred-date"/>
-                            </div>
-                            <div class="form-group"><label>Preferred Time</label>
-                                <select id="preferred-time">
-                                    <option value="">Select time…</option>
-                                    <option>Morning (9am–12pm)</option>
-                                    <option>Afternoon (12pm–3pm)</option>
-                                    <option>Late Afternoon (3pm–6pm)</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group"><label>Anything else? (optional)</label><textarea id="message" placeholder="Share a bit about your health journey, what you've tried, or any specific questions…"></textarea></div>
-                        <button class="btn-form" onclick="submitBooking()">Reserve My Free Consultation →</button>
-                        <p class="form-privacy">🔒 Your information is kept completely private and used only to prepare for your consultation. Abigail will confirm within 24 hours.</p>
                     </div>
-                <!-- </form> -->
-                <div class="success-message" id="successMsg">
+                    
+                    <div class="form-group">
+                        <label>Anything else? (optional)</label>
+                        <textarea name="message" id="message" placeholder="Share a bit about your health journey, what you've tried, or any specific questions…"></textarea>
+                    </div>
+                    
+                    <button class="btn-form" onclick="submitBooking()" type="button">Reserve My Free Consultation →</button>
+                    
+                    <p class="form-privacy">🔒 Your information is kept completely private and used only to prepare for your consultation. Abigail will confirm within 24 hours.</p>
+                </div>
+                
+                <div class="success-message" id="successMsg" style="display: none;">
                     <h3 class="success-title">Thank You!</h3>
                     <p class="success-text" id="successText"></p>
                 </div>
@@ -739,9 +747,46 @@
 
 
         
+        // const dateInput = document.getElementById('preferred-date');
+        // dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+        // function submitBooking() {
+        //     const fname = document.getElementById('fname').value.trim();
+        //     const lname = document.getElementById('lname').value.trim();
+        //     const email = document.getElementById('email').value.trim();
+        //     const phone = document.getElementById('phone').value.trim();
+        //     const concern = document.getElementById('concern').value;
+        //     const date = document.getElementById('preferred-date').value;
+        //     const time = document.getElementById('preferred-time').value;
+        //     if (!fname || !lname || !email || !phone || !concern || !date || !time) { alert('Please fill in all required fields.'); return; }
+        //     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
+        //     const formattedDate = new Date(date + 'T00:00:00').toLocaleDateString('en-GB', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+            
+        //     fetch("https://formsubmit.co/ajax/uwana89@gmail.com", {
+        //         method: "POST",
+        //         headers: { 
+        //             'Content-Type': 'application/json',
+        //             'Accept': 'application/json'
+        //         },
+        //         body: JSON.stringify({
+        //             name: "FormSubmit",
+        //             message: `${email}`
+        //         })
+        //     }).then(response => response.json())
+        //     .then(data => console.log(data))
+        //     .catch(error => console.log(error));
+            
+            
+        //     document.getElementById('formContent').style.display = 'none';
+        //     document.getElementById('successMsg').style.display = 'block';
+        //     document.getElementById('successText').innerHTML = `Thank you, <strong>${fname}</strong>! Your consultation request has been received.<br><br>Abigail will confirm your <em>${time.toLowerCase()}</em> appointment on <strong>${formattedDate}</strong> by email at <strong>${email}</strong> within 24 hours.<br><br>We look forward to speaking with you.`;
+        // }
+    
+        // Set minimum date to today
         const dateInput = document.getElementById('preferred-date');
         dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+
         function submitBooking() {
+            // Get form values
             const fname = document.getElementById('fname').value.trim();
             const lname = document.getElementById('lname').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -749,29 +794,76 @@
             const concern = document.getElementById('concern').value;
             const date = document.getElementById('preferred-date').value;
             const time = document.getElementById('preferred-time').value;
-            if (!fname || !lname || !email || !phone || !concern || !date || !time) { alert('Please fill in all required fields.'); return; }
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
-            const formattedDate = new Date(date + 'T00:00:00').toLocaleDateString('en-GB', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+            const message = document.getElementById('message').value.trim();
             
-            fetch("https://formsubmit.co/ajax/uwana89@gmail.com", {
+            // Get selected session type
+            const sessionType = document.querySelector('input[name="session"]:checked').value;
+            
+            // Validation
+            if (!fname || !lname || !email || !phone || !concern || !date || !time) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Format date for display
+            const formattedDate = new Date(date + 'T00:00:00').toLocaleDateString('en-GB', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            // Disable button and show loading state
+            const submitBtn = document.querySelector('.btn-form');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            // Submit to FormSubmit.co
+            fetch("https://formsubmit.co/ajax/info@holisticretailshop.co.uk", {
                 method: "POST",
                 headers: { 
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
                 body: JSON.stringify({
-                    name: "FormSubmit",
-                    message: "I'm from Devro LABS"
+                    "First Name": fname,
+                    "Last Name": lname,
+                    "Email": email,
+                    "Phone": phone,
+                    "Session Type": sessionType,
+                    "Primary Concern": concern,
+                    "Preferred Date": formattedDate,
+                    "Preferred Time": time,
+                    "Additional Message": message || "N/A",
+                    "_subject": "New Consultation Booking - Holistic Retail Shop",
+                    "_template": "box",
+                    "_autoresponse": "Thank you for booking! We'll be in touch soon.",  
                 })
-            }).then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.log(error));
-            
-            
-            document.getElementById('formContent').style.display = 'none';
-            document.getElementById('successMsg').style.display = 'block';
-            document.getElementById('successText').innerHTML = `Thank you, <strong>${fname}</strong>! Your consultation request has been received.<br><br>Abigail will confirm your <em>${time.toLowerCase()}</em> appointment on <strong>${formattedDate}</strong> by email at <strong>${email}</strong> within 24 hours.<br><br>We look forward to speaking with you.`;
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                
+                // Hide form and show success message
+                document.getElementById('formContent').style.display = 'none';
+                document.getElementById('successMsg').style.display = 'block';
+                document.getElementById('successText').innerHTML = `Thank you, <strong>${fname}</strong>! Your consultation request has been received.<br><br>Abigail will confirm your <em>${time.toLowerCase()}</em> appointment on <strong>${formattedDate}</strong> by email at <strong>${email}</strong> within 24 hours.<br><br>We look forward to speaking with you.`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your form. Please try again or contact us directly.');
+                
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Reserve My Free Consultation →';
+            });
         }
+            
     </script>
 </body>
 </html>
