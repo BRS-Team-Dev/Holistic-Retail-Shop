@@ -708,10 +708,11 @@ body {
 }
 
 .condition-icon svg, .about-approach svg {
-    width: 16px;
-    height: 16px;
-    fill: var(--color-sage);
-    transition: fill 0.4s ease;
+    width: 30px;
+    height: 30px;
+    stroke: var(--color-sage-dark);
+    fill: none;
+    stroke-width: 1.5;
 }
 
 .condition-card h3 {
